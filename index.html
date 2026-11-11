@@ -2384,27 +2384,27 @@
   sections.forEach(s => navObserver.observe(s));
 
   // Count-up animation on hero stats
-  function countUp(el, target, suffix, duration) {
+  function countUp(el, target, prefix, suffix, duration) {
     const isFloat = target % 1 !== 0;
-    const start = 0;
-    const step = duration / 60;
-    let current = start;
+    let current = 0;
     const increment = target / (duration / (1000 / 60));
     const timer = setInterval(() => {
       current += increment;
       if (current >= target) { current = target; clearInterval(timer); }
       const display = isFloat ? current.toFixed(1) : Math.floor(current);
-      el.textContent = (target >= 100 ? display : display) + suffix;
+      el.textContent = prefix + display + suffix;
     }, 1000 / 60);
   }
   document.querySelectorAll('.stat-card').forEach(card => {
     const numEl = card.querySelector('.stat-num');
     const raw = numEl.textContent.trim();
-    const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-    const suffix = raw.replace(/[0-9.]/g, '');
+    const prefix = raw.startsWith('$') ? '$' : '';
+    const stripped = raw.replace(/^\$/, '');
+    const num = parseFloat(stripped.replace(/[^0-9.]/g, ''));
+    const suffix = stripped.replace(/[0-9.]/g, '');
     if (!isNaN(num)) {
-      numEl.textContent = '0' + (suffix.includes('K') ? '' : suffix.replace('+',''));
-      setTimeout(() => countUp(numEl, num, suffix.replace(/[0-9]/g,''), 900), 200);
+      numEl.textContent = prefix + '0' + (suffix.includes('K') ? '' : suffix.replace('+',''));
+      setTimeout(() => countUp(numEl, num, prefix, suffix.replace(/[0-9]/g,''), 900), 200);
     }
   });
 
