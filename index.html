@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FY27 Personal Achievement Review — Ankit Goyal</title>
+<style>
+  :root {
+    --sf-blue: #0176d3;
+    --sf-blue-dark: #014486;
+    --sf-blue-light: #e8f4fd;
+    --sf-green: #2e844a;
+    --sf-green-light: #ebf5ee;
+    --sf-orange: #dd7a01;
+    --sf-orange-light: #fef3e2;
+    --sf-red: #ba0517;
+    --sf-red-light: #fde8ea;
+    --sf-purple: #7526e3;
+    --sf-purple-light: #f0ecf8;
+    --sf-teal: #0b827c;
+    --sf-teal-light: #e6f6f5;
+    --sf-navy: #16325c;
+    --sf-navy-light: #e0e8f0;
+    --sf-gold: #b67e11;
+    --sf-gold-light: #fdf3d0;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Salesforce Sans', 'Helvetica Neue', Arial, sans-serif;
+    background: #f7f9fc;
+    color: var(--gray-800);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue-dark) 40%, var(--sf-blue) 100%);
+    color: #fff;
+    padding: 48px 40px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 30%;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .hero-identity { display: flex; align-items: center; gap: 20px; }
+
+  .hero-name-block h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+  .hero-name-block .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.78;
+    font-weight: 400;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-top: 36px;
+  }
+  @media(max-width:900px){ .stats-grid { grid-template-columns: repeat(3,1fr); } }
+  @media(max-width:560px){ .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+  .stat-card {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius-sm);
+    padding: 16px 14px;
+    text-align: center;
+    cursor: default;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .stat-card:hover { background: rgba(255,255,255,0.16); transform: translateY(-2px); }
+  .stat-card .stat-num {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-card .stat-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    opacity: 0.75;
+    font-weight: 600;
+  }
+
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-link {
+    padding: 14px 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: var(--sf-blue);
+    border-bottom-color: var(--sf-blue);
+  }
+
+  /* ── SECTIONS ── */
+  .section { padding: 52px 40px; }
+  .section:nth-child(even) { background: #fff; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .section-header h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+  .section-header .section-count {
+    background: var(--sf-blue-light);
+    color: var(--sf-blue);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  /* ── IMPACT STRIP ── */
+  .impact-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .impact-bubble {
+    background: #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    cursor: default;
+  }
+  .impact-bubble:hover { border-color: var(--sf-blue); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+  .impact-bubble .ib-icon { font-size: 1.1rem; }
+  .impact-bubble.green { border-color: var(--sf-green); color: var(--sf-green); background: var(--sf-green-light); }
+  .impact-bubble.blue  { border-color: var(--sf-blue);  color: var(--sf-blue);  background: var(--sf-blue-light); }
+  .impact-bubble.orange{ border-color: var(--sf-orange);color: var(--sf-orange);background: var(--sf-orange-light); }
+  .impact-bubble.purple{ border-color: var(--sf-purple);color: var(--sf-purple);background: var(--sf-purple-light); }
+  .impact-bubble.teal  { border-color: var(--sf-teal);  color: var(--sf-teal);  background: var(--sf-teal-light); }
+  .impact-bubble.gold  { border-color: var(--sf-gold);  color: var(--sf-gold);  background: var(--sf-gold-light); }
+
+  /* ── ACCOUNT CARDS ── */
+  .account-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
+  .account-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .account-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--card-accent, var(--sf-blue));
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .account-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--sf-blue); }
+  .account-card:hover::before { opacity: 1; }
+
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .card-company { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); }
+  .card-meta { font-size: 0.78rem; color: var(--gray-600); margin-top: 2px; }
+  .card-sentiment {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+  .sentiment-green  { background: var(--sf-green-light);  color: var(--sf-green);  }
+  .sentiment-yellow { background: var(--sf-gold-light);   color: var(--sf-gold);   }
+  .sentiment-red    { background: var(--sf-red-light);    color: var(--sf-red);    }
+  .sentiment-blue   { background: var(--sf-blue-light);   color: var(--sf-blue);   }
+  .sentiment-teal   { background: var(--sf-teal-light);   color: var(--sf-teal);   }
+
+  .card-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  .cs { font-size: 0.78rem; color: var(--gray-700); }
+  .cs strong { font-weight: 700; color: var(--gray-800); }
+
+  .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: var(--gray-100);
+    color: var(--gray-600);
+  }
+  .tag.go-live { background: var(--sf-green-light); color: var(--sf-green); }
+  .tag.uat     { background: var(--sf-orange-light); color: var(--sf-orange); }
+  .tag.active  { background: var(--sf-blue-light);  color: var(--sf-blue); }
+  .tag.peer    { background: var(--sf-purple-light); color: var(--sf-purple); }
+  .tag.eng     { background: var(--sf-teal-light);   color: var(--sf-teal); }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 12px;
+    margin-top: 4px;
+  }
+  .card-cta {
+    font-size: 0.76rem;
+    color: var(--sf-blue);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .card-cta::after { content: ' →'; }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
+    overflow-y: auto;
+    backdrop-filter: blur(2px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: #fff;
+    border-radius: var(--radius);
+    max-width: 680px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp 0.25s ease;
+    position: relative;
+    margin: auto;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .modal-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .modal-title { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); }
+  .modal-subtitle { font-size: 0.85rem; color: var(--gray-600); margin-top: 4px; }
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--gray-600);
+    padding: 4px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .modal-close:hover { background: var(--gray-100); }
+  .modal-body { padding: 24px 28px; }
+  .modal-section { margin-bottom: 22px; }
+  .modal-section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    color: var(--gray-600);
+    margin-bottom: 10px;
+  }
+
+  .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .metric-box {
+    background: var(--gray-100);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    flex: 1;
+    min-width: 110px;
+    text-align: center;
+  }
+  .metric-box .mnum { font-size: 1.5rem; font-weight: 800; color: var(--sf-blue); }
+  .metric-box .mlbl { font-size: 0.72rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .quote-block {
+    background: var(--sf-blue-light);
+    border-left: 3px solid var(--sf-blue);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .quote-block.green  { background: var(--sf-green-light);  border-color: var(--sf-green); }
+  .quote-block.purple { background: var(--sf-purple-light); border-color: var(--sf-purple); }
+  .quote-block.orange { background: var(--sf-orange-light); border-color: var(--sf-orange); }
+  .quote-block.teal   { background: var(--sf-teal-light);   border-color: var(--sf-teal); }
+  .quote-text { font-size: 0.88rem; font-style: italic; color: var(--gray-700); line-height: 1.6; margin-bottom: 6px; }
+  .quote-attr { font-size: 0.76rem; font-weight: 700; color: var(--gray-600); }
+
+  .story-p { font-size: 0.88rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 10px; }
+  .story-list { padding-left: 18px; }
+  .story-list li { font-size: 0.87rem; color: var(--gray-700); margin-bottom: 6px; line-height: 1.55; }
+
+  .adoption-bar-wrap { margin: 14px 0; }
+  .adoption-bar-label { display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; color: var(--gray-600); margin-bottom: 6px; }
+  .adoption-bar-track {
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .adoption-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--sf-green);
+    width: 0%;
+    transition: width 0.8s ease;
+  }
+  .adoption-bar-fill.blue   { background: var(--sf-blue); }
+  .adoption-bar-fill.orange { background: var(--sf-orange); }
+  .adoption-bar-fill.teal   { background: var(--sf-teal); }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--sf-blue), var(--sf-teal));
+  }
+  .tl-item { position: relative; margin-bottom: 28px; }
+  .tl-dot {
+    position: absolute;
+    left: -24px;
+    top: 3px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--sf-blue);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--sf-blue);
+  }
+  .tl-date { font-size: 0.73rem; font-weight: 700; color: var(--sf-blue); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .tl-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    box-shadow: var(--shadow-sm);
+  }
+  .tl-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+  .tl-card p  { font-size: 0.83rem; color: var(--gray-600); line-height: 1.55; }
+  .tl-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    background: var(--sf-blue-light);
+    color: var(--sf-blue);
+    vertical-align: middle;
+  }
+  .tl-tag.green  { background: var(--sf-green-light);  color: var(--sf-green);  }
+  .tl-tag.orange { background: var(--sf-orange-light); color: var(--sf-orange); }
+  .tl-tag.purple { background: var(--sf-purple-light); color: var(--sf-purple); }
+  .tl-tag.teal   { background: var(--sf-teal-light);   color: var(--sf-teal);   }
+
+  /* ── KUDOS WALL ── */
+  .kudos-scroll {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 4px 4px 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-300) transparent;
+    scroll-snap-type: x mandatory;
+  }
+  .kudos-scroll::-webkit-scrollbar { height: 5px; }
+  .kudos-scroll::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+
+  .kudos-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 22px 22px 18px;
+    min-width: 290px;
+    max-width: 290px;
+    box-shadow: var(--shadow-sm);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: box-shadow 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .kudos-card::before {
+    content: '"';
+    position: absolute;
+    top: -8px; right: 16px;
+    font-size: 5rem;
+    color: var(--sf-blue-light);
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .kudos-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .kudos-card.green::before  { color: var(--sf-green-light); }
+  .kudos-card.purple::before { color: var(--sf-purple-light); }
+  .kudos-card.orange::before { color: var(--sf-orange-light); }
+  .kudos-card.teal::before   { color: var(--sf-teal-light); }
+  .kudos-card.gold::before   { color: var(--sf-gold-light); }
+  .kudos-card.navy::before   { color: var(--sf-navy-light); }
+
+  .kudos-quote { font-size: 0.85rem; color: var(--gray-700); line-height: 1.6; font-style: italic; position: relative; z-index: 1; flex: 1; }
+  .kudos-from { display: flex; align-items: center; gap: 10px; padding-top: 10px; border-top: 1px solid var(--gray-200); }
+  .kudos-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #fff;
+    background: var(--sf-blue);
+    flex-shrink: 0;
+  }
+  .kudos-avatar.green  { background: var(--sf-green); }
+  .kudos-avatar.purple { background: var(--sf-purple); }
+  .kudos-avatar.orange { background: var(--sf-orange); }
+  .kudos-avatar.teal   { background: var(--sf-teal); }
+  .kudos-avatar.gold   { background: var(--sf-gold); }
+  .kudos-avatar.navy   { background: var(--sf-navy); }
+  .kudos-name  { font-size: 0.8rem; font-weight: 700; color: var(--gray-800); }
+  .kudos-role  { font-size: 0.72rem; color: var(--gray-600); }
+  .kudos-account { font-size: 0.7rem; font-weight: 600; color: var(--sf-blue); }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .skill-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 0;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .skill-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .skill-card-accent {
+    height: 4px;
+    width: 100%;
+    background: var(--sf-blue);
+  }
+  .skill-card-body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .skill-card-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    background: var(--sf-blue-light);
+    flex-shrink: 0;
+  }
+  .skill-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--gray-800); margin-bottom: 5px; }
+  .skill-card .skill-desc { font-size: 0.77rem; color: var(--gray-600); line-height: 1.55; margin-bottom: 0; flex: 1; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .skill-tag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--sf-blue-light);
+    color: var(--sf-blue);
+  }
+  .skill-tag.green  { background: var(--sf-green-light); color: var(--sf-green); }
+  .skill-tag.teal   { background: var(--sf-teal-light);  color: var(--sf-teal); }
+  .skill-tag.purple { background: var(--sf-purple-light); color: var(--sf-purple); }
+  .skill-tag.orange { background: var(--sf-orange-light); color: var(--sf-orange); }
+  .skill-tag.gold   { background: var(--sf-gold-light);  color: var(--sf-gold); }
+  .skill-bar-track {
+    height: 6px;
+    background: var(--gray-200);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--sf-blue);
+    width: 0%;
+    transition: width 0.9s ease;
+  }
+  .skill-bar-fill.green  { background: var(--sf-green); }
+  .skill-bar-fill.purple { background: var(--sf-purple); }
+  .skill-bar-fill.teal   { background: var(--sf-teal); }
+  .skill-bar-fill.orange { background: var(--sf-orange); }
+
+  /* ── AI CARDS ── */
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .ai-card {
+    background: linear-gradient(135deg, var(--sf-purple-light), #fff);
+    border: 1px solid #ddd5f5;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .ai-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .ai-card .ai-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .ai-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+  .ai-card p  { font-size: 0.81rem; color: var(--gray-600); line-height: 1.55; }
+
+  /* ── PRODUCT IMPACT ── */
+  .impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .impact-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .impact-card .ic-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    color: var(--sf-blue);
+    margin-bottom: 8px;
+  }
+  .impact-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+  .impact-card p  { font-size: 0.81rem; color: var(--gray-600); line-height: 1.55; }
+
+  /* ── PROMO BANNER ── */
+  .promo-banner {
+    background: linear-gradient(135deg, var(--sf-navy), var(--sf-blue-dark));
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 24px;
+  }
+  .promo-icon { font-size: 2.5rem; }
+  .promo-text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+  .promo-text p  { font-size: 0.88rem; opacity: 0.85; line-height: 1.6; }
+
+  .signal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .signal-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    color: #fff;
+  }
+  .signal-item .sig-icon { font-size: 1.1rem; margin-bottom: 6px; }
+  .signal-item .sig-title { font-size: 0.82rem; font-weight: 700; margin-bottom: 4px; }
+  .signal-item .sig-desc { font-size: 0.76rem; opacity: 0.78; line-height: 1.5; }
+
+  .promo-section-wrap {
+    background: linear-gradient(135deg, var(--sf-navy), var(--sf-blue-dark));
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    color: #fff;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* ── AVATAR INITIALS ── */
+  .hero-avatar {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+    border: 2px solid rgba(255,255,255,0.35);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; font-weight: 800; color: #fff;
+    letter-spacing: -1px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  /* ── STAT CARDS — enhanced ── */
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .stat-card:hover::after { transform: scaleX(1); }
+  .stat-num-animated { display: inline-block; }
+
+  /* ── ACCOUNT CARD — accent always visible ── */
+  .account-card::before { opacity: 0.4; }
+  .account-card:hover::before { opacity: 1; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--sf-blue) 0%, var(--sf-teal) 50%, transparent 100%);
+    opacity: 0.12;
+    margin: 0;
+  }
+
+  /* ── PORTFOLIO RING CHART ── */
+  .portfolio-visual {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    padding: 24px;
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+  }
+  .ring-wrap {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg { display: block; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .ring-center-num { font-size: 1.6rem; font-weight: 800; color: var(--gray-800); line-height: 1; }
+  .ring-center-lbl { font-size: 0.65rem; font-weight: 700; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .ring-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .ring-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+  }
+  .ring-legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .ring-legend-label { flex: 1; font-weight: 600; }
+  .ring-legend-val { font-weight: 700; color: var(--gray-800); }
+
+  /* ── SKILL CARD — enhanced ── */
+  .skill-bar-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gray-600);
+    margin-bottom: 4px;
+  }
+  .skill-bar-pct { color: var(--sf-blue); }
+
+  /* ── CERT CARDS — badge style ── */
+  .cert-badge {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .cert-card-inner { display: flex; gap: 14px; align-items: flex-start; }
+  .cert-status {
+    display: inline-block;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .cert-status.done   { background: var(--sf-green-light);  color: var(--sf-green); }
+  .cert-status.prog   { background: var(--sf-orange-light); color: var(--sf-orange); }
+  .cert-status.expert { background: var(--sf-purple-light); color: var(--sf-purple); }
+
+  /* ── IMPACT CARD — coloured top stripe ── */
+  .impact-card {
+    border-top: 3px solid var(--sf-blue);
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .impact-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .impact-card.voc    { border-top-color: var(--sf-teal); }
+  .impact-card.bug    { border-top-color: var(--sf-orange); }
+  .impact-card.arch   { border-top-color: var(--sf-purple); }
+  .impact-card.tool   { border-top-color: var(--sf-green); }
+  .impact-card.wbr    { border-top-color: var(--sf-navy); }
+
+  /* ── SIGNAL ITEMS — border-left accent ── */
+  .signal-item {
+    border-left: 3px solid rgba(255,255,255,0.25);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .signal-item:hover {
+    background: rgba(255,255,255,0.14);
+    border-left-color: rgba(255,255,255,0.6);
+  }
+
+  /* ── KUDOS CARD — left border accent ── */
+  .kudos-card {
+    border-left: 3px solid var(--gray-200);
+  }
+  .kudos-card.green  { border-left-color: var(--sf-green); }
+  .kudos-card.teal   { border-left-color: var(--sf-teal); }
+  .kudos-card.orange { border-left-color: var(--sf-orange); }
+  .kudos-card.purple { border-left-color: var(--sf-purple); }
+  .kudos-card.gold   { border-left-color: var(--sf-gold); }
+  .kudos-card.navy   { border-left-color: var(--sf-navy); }
+
+  /* ── HERO ENHANCEMENTS ── */
+  .hero {
+    background: linear-gradient(135deg, #0b1f3a 0%, var(--sf-blue-dark) 45%, var(--sf-blue) 100%);
+  }
+  .hero::before {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  }
+  .hero::after {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(1,118,211,0.15) 0%, transparent 70%);
+  }
+  /* third orb */
+  .hero-inner::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  /* ── AI CARD — gradient enhancement ── */
+  .ai-card {
+    background: linear-gradient(145deg, var(--sf-purple-light) 0%, #faf9ff 60%, #fff 100%);
+    border-color: #d8ccf5;
+  }
+  .ai-card .ai-icon {
+    width: 44px; height: 44px;
+    background: var(--sf-purple-light);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  /* ── SECTION HEADER enhancement ── */
+  .section-header h2::after {
+    content: '';
+    display: block;
+    width: 32px; height: 3px;
+    background: var(--sf-blue);
+    border-radius: 2px;
+    margin-top: 6px;
+  }
+
+  /* ── TIMELINE DOT pulse for active ── */
+  @keyframes pulse-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(1,118,211,0.5); }
+    70%  { box-shadow: 0 0 0 6px rgba(1,118,211,0); }
+    100% { box-shadow: 0 0 0 0 rgba(1,118,211,0); }
+  }
+  .tl-dot.pulse { animation: pulse-ring 2s ease infinite; }
+
+  /* ── COUNT-UP animation ── */
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .stat-card { animation: fadeSlideIn 0.4s ease both; }
+  .stat-card:nth-child(1) { animation-delay: 0.05s; }
+  .stat-card:nth-child(2) { animation-delay: 0.10s; }
+  .stat-card:nth-child(3) { animation-delay: 0.15s; }
+  .stat-card:nth-child(4) { animation-delay: 0.20s; }
+  .stat-card:nth-child(5) { animation-delay: 0.25s; }
+  .stat-card:nth-child(6) { animation-delay: 0.30s; }
+
+  /* ── UTILS ── */
+  .pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin: 2px 3px 2px 0;
+  }
+  .pill.green  { background: var(--sf-green-light);  color: var(--sf-green); }
+  .pill.blue   { background: var(--sf-blue-light);   color: var(--sf-blue); }
+  .pill.orange { background: var(--sf-orange-light); color: var(--sf-orange); }
+  .pill.purple { background: var(--sf-purple-light); color: var(--sf-purple); }
+  .pill.teal   { background: var(--sf-teal-light);   color: var(--sf-teal); }
+  .pill.red    { background: var(--sf-red-light);    color: var(--sf-red); }
+  .pill.navy   { background: var(--sf-navy-light);   color: var(--sf-navy); }
+  .pill.gold   { background: var(--sf-gold-light);   color: var(--sf-gold); }
+  .pill.go-live { background: var(--sf-green-light); color: var(--sf-green); }
+  .pill.uat     { background: var(--sf-orange-light); color: var(--sf-orange); }
+
+  .scroll-hint {
+    font-size: 0.76rem;
+    color: var(--gray-600);
+    margin-bottom: 12px;
+  }
+
+  .peer-callout {
+    background: var(--sf-purple-light);
+    border: 1px solid #ddd5f5;
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.83rem;
+    color: var(--sf-purple);
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="hero-identity">
+        <div class="hero-avatar">AG</div>
+        <div>
+          <!-- Salesforce Cloud Logo -->
+          <svg width="44" height="30" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:6px;opacity:0.9">
+            <path d="M58 17C62.5 11.5 69.2 8 76.8 8c10.8 0 20 6.8 23.8 16.3C103 22.7 106.2 22 109.5 22c12.5 0 22.5 10.1 22.5 22.5S122 67 109.5 67H28C17.5 67 9 58.5 9 48c0-10.5 7.2-19.3 17-21.7-.2-1.1-.3-2.3-.3-3.5C25.7 10.3 34.5 2 45.2 2c6.3 0 11.8 2.8 15.5 7.1" fill="white" opacity="0.95"/>
+          </svg>
+          <div class="hero-name-block">
+            <h1>Ankit Goyal</h1>
+            <div class="subtitle">Success Architect · Revenue Cloud Advanced · Salesforce Industries</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-badge">FY27 Personal Achievement Review</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Accounts</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Go-Lives</div>
+        <div style="font-size:0.65rem;color:var(--gray-500);margin-top:2px;line-height:1.4;">Milestone · Kingspan · Common App</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">119+</div>
+        <div class="stat-label">Cases (3 Accounts)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$600K</div>
+        <div class="stat-label">ARI Secured</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">9+</div>
+        <div class="stat-label">Kudos Received</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">31</div>
+        <div class="stat-label">Bugs Identified</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <a href="#impact" class="nav-link">Impact</a>
+    <a href="#accounts" class="nav-link">SA Accounts</a>
+    <a href="#beyond" class="nav-link">Beyond Scope</a>
+    <a href="#timeline" class="nav-link">Timeline</a>
+    <a href="#kudos" class="nav-link">Kudos</a>
+    <a href="#skills" class="nav-link">Competencies</a>
+    <a href="#certs" class="nav-link">Certifications</a>
+    <a href="#product" class="nav-link">Product Impact</a>
+    <a href="#ai" class="nav-link">AI Innovation</a>
+    <a href="#promo" class="nav-link">FY27 Summary</a>
+  </div>
+</nav>
+
+<div class="section-divider"></div>
+<!-- IMPACT OVERVIEW -->
+<section class="section" id="impact">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>High-Impact Moments</h2>
+      <span class="section-count">FY27 Highlights</span>
+    </div>
+
+    <!-- Portfolio Ring Chart -->
+    <div class="portfolio-visual">
+      <div class="ring-wrap">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <!-- Background ring -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#e5e7eb" stroke-width="14"/>
+          <!-- Go-Lives: 3/9 accounts = 33% — green -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#2e844a" stroke-width="14"
+            stroke-dasharray="109 218" stroke-dashoffset="0" stroke-linecap="round"
+            style="transform-origin:center;transform:rotate(-90deg)"/>
+          <!-- Active Impl: 2/9 = 22% — orange -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#dd7a01" stroke-width="14"
+            stroke-dasharray="72 218" stroke-dashoffset="-109" stroke-linecap="round"
+            style="transform-origin:center;transform:rotate(-90deg)"/>
+          <!-- Cancelled: 2/9 = 22% — red -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#ba0517" stroke-width="14"
+            stroke-dasharray="72 218" stroke-dashoffset="-181" stroke-linecap="round"
+            style="transform-origin:center;transform:rotate(-90deg)"/>
+          <!-- Discovery: 1/9 = 11% — blue -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#0176d3" stroke-width="14"
+            stroke-dasharray="36 218" stroke-dashoffset="-253" stroke-linecap="round"
+            style="transform-origin:center;transform:rotate(-90deg)"/>
+          <!-- Monitoring: 1/9 = 11% — navy -->
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#16325c" stroke-width="14"
+            stroke-dasharray="29 218" stroke-dashoffset="-289" stroke-linecap="round"
+            style="transform-origin:center;transform:rotate(-90deg)"/>
+        </svg>
+        <div class="ring-center">
+          <div class="ring-center-num">9</div>
+          <div class="ring-center-lbl">Accounts</div>
+        </div>
+      </div>
+      <div class="ring-legend">
+        <div style="font-size:0.82rem;font-weight:700;color:var(--gray-700);margin-bottom:6px;">SA Account Portfolio Breakdown</div>
+        <div class="ring-legend-item"><div class="ring-legend-dot" style="background:#2e844a"></div><span class="ring-legend-label">Hypercare / Complete</span><span class="ring-legend-val">3</span></div>
+        <div class="ring-legend-item"><div class="ring-legend-dot" style="background:#dd7a01"></div><span class="ring-legend-label">Active Implementation</span><span class="ring-legend-val">2</span></div>
+        <div class="ring-legend-item"><div class="ring-legend-dot" style="background:#ba0517"></div><span class="ring-legend-label">Cancelled</span><span class="ring-legend-val">2</span></div>
+        <div class="ring-legend-item"><div class="ring-legend-dot" style="background:#0176d3"></div><span class="ring-legend-label">Discovery</span><span class="ring-legend-val">1</span></div>
+        <div class="ring-legend-item"><div class="ring-legend-dot" style="background:#16325c"></div><span class="ring-legend-label">Monitoring</span><span class="ring-legend-val">1</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:160px;">
+        <div style="font-size:0.82rem;font-weight:700;color:var(--gray-700);margin-bottom:2px;">FY27 Key Numbers</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">Cases (3 go-lives)</span>
+          <strong style="color:var(--sf-blue)">119+</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">ARI Secured</span>
+          <strong style="color:var(--sf-green)">$600K</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">Top Adoption</span>
+          <strong style="color:var(--sf-green)">97%</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">Confirmed Bugs</span>
+          <strong style="color:var(--sf-teal)">31</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">VOC</span>
+          <strong style="color:var(--sf-purple)">8</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+          <span style="color:var(--gray-600)">Kudos</span>
+          <strong style="color:var(--sf-purple)">9</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="impact-strip">
+      <div class="impact-bubble green"><span class="ib-icon">🚀</span> 3 Production Go-Lives</div>
+      <div class="impact-bubble blue"><span class="ib-icon">🔧</span> 68 Cases · Milestone Hypercare</div>
+      <div class="impact-bubble blue"><span class="ib-icon">📋</span> 28 Cases · Common Application</div>
+      <div class="impact-bubble blue"><span class="ib-icon">📋</span> 23 Cases · Kingspan</div>
+      <div class="impact-bubble orange"><span class="ib-icon">💰</span> $600K ARI — Kingspan Red→Green</div>
+      <div class="impact-bubble purple"><span class="ib-icon">🏗️</span> Gartner Architecture Validation</div>
+      <div class="impact-bubble teal"><span class="ib-icon">🤝</span> Ovarro Partner Community User Resolution — Peer Collab</div>
+      <div class="impact-bubble gold"><span class="ib-icon">⬆️</span> Milestone → Signature Tier Upgrade</div>
+    </div>
+
+    <div class="impact-cards">
+      <div class="impact-card" style="border-top-color:var(--sf-blue)">
+        <div class="ic-label">Portfolio Reach</div>
+        <h4>9-Account Full Portfolio</h4>
+        <p>Managed RCA engagements across Parker, Milestone, Kingspan, Common Application, LearnUpon, A10 Networks, KX Systems, Databricks, and Elsevier — plus beyond-scope contributions on Gartner (engineering initiative) and Ovarro (peer collab).</p>
+      </div>
+      <div class="impact-card" style="border-top-color:var(--sf-green)">
+        <div class="ic-label">Customer Success</div>
+        <h4>Milestone → Signature Support</h4>
+        <p>Delivery quality drove a formal tier upgrade: Milestone moved from Premier to Signature support. CSM Charlotte Brix confirmed the customer was highly satisfied with the engagement and specifically requested me as the SA for the follow-on Health Review — a direct outcome of the trust and technical credibility built during the go-live.</p>
+      </div>
+      <div class="impact-card" style="border-top-color:var(--sf-orange)">
+        <div class="ic-label">Revenue Protection</div>
+        <h4>$600K ARI — Kingspan Turnaround</h4>
+        <p>Inherited a Red-sentiment Kingspan engagement. Delivered go-live with zero critical post-launch issues. Full Red → Green turnaround with $600K ARI secured. Recognized by NextView Architect and <em>"this is SA excellence at its best"</em> — Michael Raja.</p>
+      </div>
+      <div class="impact-card arch">
+        <div class="ic-label">Architecture Initiative</div>
+        <h4>Gartner API-First Framework</h4>
+        <p>Stepped up on an Engineering/Product team request to validate RCA architecture and deliver a reusable API-first migration quick-start framework. Product Manager Shubhayu Bera: <em>"What Ankit delivered on the Gartner project was no small task — genuinely appreciate it!"</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTS -->
+<section class="section" id="accounts">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>SA Account Engagements</h2>
+      <span class="section-count">9 RCA Engagements · FY27</span>
+    </div>
+
+    <div class="account-grid">
+
+      <div class="account-card" style="--card-accent:var(--sf-red)" onclick="openModal('modal-milestone')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Milestone Systems</div>
+            <div class="card-meta">Enterprise · EMEA · Video Surveillance</div>
+          </div>
+          <div class="card-sentiment sentiment-red">● Red</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs"><strong>68</strong> Cases</div>
+          <div class="cs">|</div>
+          <div class="cs">PSL <strong>525</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Adoption <strong>97%</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag go-live">Go-Live Jan '26</span>
+          <span class="tag">Signature Upgrade</span>
+          <span class="tag">Hypercare Lead</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View full story</div>
+          <span class="pill green">Top Performer</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-blue)" onclick="openModal('modal-commonapp')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Common Application</div>
+            <div class="card-meta">Higher Education · Non-profit · US</div>
+          </div>
+          <div class="card-sentiment sentiment-green">● Green</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs"><strong>28</strong> Cases</div>
+          <div class="cs">|</div>
+          <div class="cs">PSL <strong>60</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Adoption <strong>70%</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag go-live">Go-Live Feb '26</span>
+          <span class="tag">Hypercare</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View full story</div>
+          <span class="pill blue">Active</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-orange)" onclick="openModal('modal-kingspan')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Kingspan</div>
+            <div class="card-meta">Manufacturing · EMEA · Building Products</div>
+          </div>
+          <div class="card-sentiment sentiment-green">● Green</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs"><strong>23</strong> Cases</div>
+          <div class="cs">|</div>
+          <div class="cs">PSL <strong>76</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">ARI <strong>$600K</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag go-live">Go-Live Jun '26</span>
+          <span class="tag">Red→Green</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View full story</div>
+          <span class="pill orange">Turnaround</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-orange)" onclick="openModal('modal-learnupon')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">LearnUpon</div>
+            <div class="card-meta">LMS / EdTech · Ireland · ~$370K ACV</div>
+          </div>
+          <div class="card-sentiment sentiment-yellow">● Yellow</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs">PSL <strong>~12</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Phase <strong>Testing</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">ACV <strong>~$370K</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag uat">Testing — Not Yet Live</span>
+          <span class="tag">Go-Live Dec 14 '26</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill orange">Testing</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-gold)" onclick="openModal('modal-parker')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Parker Hannifin</div>
+            <div class="card-meta">Industrial Manufacturing · Enterprise · US</div>
+          </div>
+          <div class="card-sentiment sentiment-yellow">● Yellow</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs">PSL <strong>2500</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Adoption <strong>35%</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag uat">Go-Live Stage</span>
+          <span class="tag">Go-Live Apr '26</span>
+          <span class="tag">VOC Filed</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill orange">Go-Live</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-red)" onclick="openModal('modal-a10')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">A10 Networks</div>
+            <div class="card-meta">Cybersecurity / Networking · Technology</div>
+          </div>
+          <div class="card-sentiment sentiment-red">● Red</div>
+        </div>
+        <div class="card-tags">
+          <span class="tag" style="background:var(--sf-red-light);color:var(--sf-red)">Cancelled</span>
+          <span class="tag">Planned Go-Live Jun '26</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill" style="background:var(--sf-red-light);color:var(--sf-red)">Cancelled</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-gold)" onclick="openModal('modal-kx')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">KX Systems</div>
+            <div class="card-meta">Data Analytics / Financial Tech</div>
+          </div>
+          <div class="card-sentiment sentiment-yellow">● Yellow</div>
+        </div>
+        <div class="card-tags">
+          <span class="tag" style="background:var(--sf-red-light);color:var(--sf-red)">Cancelled</span>
+          <span class="tag">Planned Go-Live May '26</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill orange">Cancelled</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-navy)" onclick="openModal('modal-databricks')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Databricks</div>
+            <div class="card-meta">Data & AI Platform · Technology</div>
+          </div>
+          <div class="card-sentiment sentiment-blue">● Monitoring</div>
+        </div>
+        <div class="card-tags">
+          <span class="tag active">SA Engagement</span>
+          <span class="tag">Low Adoption Monitoring</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill navy">Monitoring</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-purple)" onclick="openModal('modal-elsevier')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Elsevier</div>
+            <div class="card-meta">Academic Publishing · Global Enterprise</div>
+          </div>
+          <div class="card-sentiment sentiment-green">● Green</div>
+        </div>
+        <div class="card-tags">
+          <span class="tag active">Discovery Phase</span>
+          <span class="tag">Deal Jan '26–Jan '27</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill blue">Discovery</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND SCOPE CONTRIBUTIONS -->
+<section class="section" id="beyond">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Beyond-Scope Contributions</h2>
+      <span class="section-count">Peer collaboration &amp; engineering initiatives</span>
+    </div>
+    <p style="font-size:0.85rem;color:var(--gray-600);margin-bottom:24px;">Stepped up on Engineering requests, unblocked peer SA teams, and delivered cross-functional outcomes — impact that reached Product, Architecture, and the broader RCAT community.</p>
+
+    <div class="account-grid">
+
+      <div class="account-card" style="--card-accent:var(--sf-teal)" onclick="openModal('modal-gartner')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Gartner</div>
+            <div class="card-meta">Research/Advisory · Engineering/Product Initiative</div>
+          </div>
+          <div class="card-sentiment sentiment-teal">● Initiative</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs">API-First <strong>Framework Built</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Architecture <strong>Validated</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag eng">Engineering Request</span>
+          <span class="tag">API-First Migration</span>
+          <span class="tag">Product Collaboration</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill teal">Architecture Initiative</span>
+        </div>
+      </div>
+
+      <div class="account-card" style="--card-accent:var(--sf-purple)" onclick="openModal('modal-ovarro')">
+        <div class="card-top">
+          <div>
+            <div class="card-company">Ovarro</div>
+            <div class="card-meta">Utility Tech · Partner Community User Expertise</div>
+          </div>
+          <div class="card-sentiment sentiment-blue">● Peer Assist</div>
+        </div>
+        <div class="card-stats">
+          <div class="cs">Partner Community User Blocker <strong>Resolved</strong></div>
+          <div class="cs">|</div>
+          <div class="cs">Customer <strong>Unblocked</strong></div>
+        </div>
+        <div class="card-tags">
+          <span class="tag peer">Peer Collaboration</span>
+          <span class="tag">Partner Community User</span>
+          <span class="tag">Knowledge Sharing</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-cta">View details</div>
+          <span class="pill purple">Peer Collab</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>FY27 Activity Timeline</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-green);box-shadow:0 0 0 2px var(--sf-green)"></div>
+        <div class="tl-date">Jan 2026</div>
+        <div class="tl-card">
+          <h4>Milestone Systems — Production Go-Live <span class="tl-tag green">Go-Live #1</span></h4>
+          <p>Led hypercare for Milestone go-live. Closed all 68 cases. 97% RCA adoption across 525 provisioned licenses. Milestone upgraded to Signature support tier — customer specifically requested me for the follow-on Health Review.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-blue);box-shadow:0 0 0 2px var(--sf-blue)"></div>
+        <div class="tl-date">Feb 2026</div>
+        <div class="tl-card">
+          <h4>Common Application — Production Go-Live <span class="tl-tag green">Go-Live #2</span></h4>
+          <p>Supported Common Application go-live. Continued in Hypercare, resolving 28 cases and driving 70% RCA adoption. Configured Partner Community User access for education-specific partner model.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-teal);box-shadow:0 0 0 2px var(--sf-teal)"></div>
+        <div class="tl-date">Apr 2026</div>
+        <div class="tl-card">
+          <h4>Parker Hannifin — ETL User Access VOC <span class="tl-tag teal">VOC #1</span></h4>
+          <p>Filed VOC for ETL user access gap in Revenue Cloud — identified during Parker engagement. Proactive field-to-product feedback demonstrating platform ownership beyond account scope.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-orange);box-shadow:0 0 0 2px var(--sf-orange)"></div>
+        <div class="tl-date">Jun 2026</div>
+        <div class="tl-card">
+          <h4>Kingspan — Production Go-Live <span class="tl-tag green">Go-Live #3</span></h4>
+          <p>Took over a stalled Red-sentiment Kingspan engagement and delivered go-live June 2026. Zero critical post-launch issues. $600K ARI secured. Full Red → Green turnaround recognized by leadership.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-teal);box-shadow:0 0 0 2px var(--sf-teal)"></div>
+        <div class="tl-date">Jul–Aug 2026</div>
+        <div class="tl-card">
+          <h4>Gartner — Engineering/Product Architecture Initiative <span class="tl-tag teal">Initiative</span></h4>
+          <p>Took initiative on an Engineering team request passed to the SA team — validated RCA architecture and built an API-first migration quick-start framework for Gartner. PM Shubhayu Bera acknowledged impact via Slack.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-purple);box-shadow:0 0 0 2px var(--sf-purple)"></div>
+        <div class="tl-date">Aug 2026</div>
+        <div class="tl-card">
+          <h4>Ovarro — Partner Community User Blocker Resolution <span class="tl-tag" style="background:var(--sf-purple-light);color:var(--sf-purple)">Cross-Team</span></h4>
+          <p>Stepped in to diagnose and resolve a complex Partner Community User configuration blocker on a peer SA's account. Identified root cause and unblocked the customer's implementation — drawing on deep platform expertise to deliver a fast resolution.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-blue);box-shadow:0 0 0 2px var(--sf-blue)"></div>
+        <div class="tl-date">Sep 15 &amp; Sep 22, 2026</div>
+        <div class="tl-card">
+          <h4>WBR Video Walkthroughs <span class="tl-tag">WBR</span></h4>
+          <p>Created and led two Weekly Business Review video walkthroughs using GVideo + Google Drive. Sessions covered portfolio delivery status and key insights for leadership visibility.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-blue);box-shadow:0 0 0 2px var(--sf-blue)"></div>
+        <div class="tl-date">Sep 2026</div>
+        <div class="tl-card">
+          <h4>264 Blitz Testing — CML Findings to Engineering <span class="tl-tag">Release</span></h4>
+          <p>Joined the 264 blitz testing cycle and contributed CML-specific test findings directly to Engineering ahead of GA. Separately drove 264 release solution documentation with customers across active engagements — proactively briefing account teams on new features, behavioral changes, and applicable mitigations to reduce post-release disruption.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-teal);box-shadow:0 0 0 2px var(--sf-teal)"></div>
+        <div class="tl-date">Oct 2026</div>
+        <div class="tl-card">
+          <h4>RCA Community User Permission Automation — MCP Tool Built <span class="tl-tag teal">AI / Tooling</span></h4>
+          <p>Built a production-ready Node.js MCP server integrated with Claude Code that generates Partner Community User permission set XMLs from a curated 39-permission registry. Eliminates manual permission setup errors, accelerates SA delivery, and standardizes partner community user configurations across RCA engagements.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-orange);box-shadow:0 0 0 2px var(--sf-orange)"></div>
+        <div class="tl-date">Oct–Dec 2026</div>
+        <div class="tl-card">
+          <h4>LearnUpon — Active Implementation / Testing Phase <span class="tl-tag orange">In Progress</span></h4>
+          <p>In active Testing phase. Go-live planned December 14, 2026. ~$370K ACV. AE Mark McCormack: <em>"Thank you for your fantastic support to date on the LearnUpon project, it has been very valuable."</em></p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--sf-teal);box-shadow:0 0 0 2px var(--sf-teal)"></div>
+        <div class="tl-date">Nov 2026</div>
+        <div class="tl-card">
+          <h4>Partner Community User Documentation Gap &amp; Engineering Investigations — VOC #2 <span class="tl-tag teal">VOC #2</span></h4>
+          <p>Filed VOC for Partner Community User documentation gap (VOC a3Yed000000BFa1EAG, PM: David Louie) — pattern surfaced across Parker and LearnUpon engagements. 31 product bugs identified and managed across 9 accounts this fiscal year via proactive Engineering engagement.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KUDOS WALL -->
+<section class="section" id="kudos">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Kudos &amp; Recognition</h2>
+      <span class="section-count">9+</span>
+    </div>
+    <div class="scroll-hint">Scroll → to see all kudos</div>
+
+    <div class="kudos-scroll">
+
+      <div class="kudos-card gold">
+        <div class="kudos-quote">"Ankit is our best SA and as such is in high demand."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar gold">MR</div>
+          <div>
+            <div class="kudos-name">Michael Raja</div>
+            <div class="kudos-role">Sr. Director, Product Management · PM Sponsor <span style="font-size:0.7rem;background:var(--sf-gold-light);color:var(--sf-gold);padding:1px 7px;border-radius:10px;font-weight:600;margin-left:4px">Product Team</span></div>
+            <div class="kudos-account">Revenue Cloud Product</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card gold">
+        <div class="kudos-quote">"Over communicates, methodological, experienced. Ankit consistently brings structured thinking and deep domain expertise to every engagement. His approach to problem-solving is repeatable and scalable."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar gold">MR</div>
+          <div>
+            <div class="kudos-name">Michael Raja</div>
+            <div class="kudos-role">Sr. Director, Product Management · PM Sponsor <span style="font-size:0.7rem;background:var(--sf-gold-light);color:var(--sf-gold);padding:1px 7px;border-radius:10px;font-weight:600;margin-left:4px">Product Team</span></div>
+            <div class="kudos-account">Revenue Cloud Product</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card purple">
+        <div class="kudos-quote">"Amazing work on the Kingspan engagement. Red → Green, zero critical post-launch issues, and $600K in ARI secured — this is SA excellence at its best."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar purple">WP</div>
+          <div>
+            <div class="kudos-name">William Pessoa &amp; Sowjanya</div>
+            <div class="kudos-role">William Pessoa · Senior Director, Revenue Cloud &nbsp;|&nbsp; Sowjanya · Manager</div>
+            <div class="kudos-account">Kingspan Turnaround</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card green">
+        <div class="kudos-quote">"Ankit went above and beyond to understand the business requirements for the Parker Hannifin engagement. He proactively identified gaps in our PCU permissions setup before they became blockers in production — that level of foresight is rare. The customer team specifically mentioned his clarity and ownership on every call. He is a strong example of what great SA delivery looks like."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar green">ES</div>
+          <div>
+            <div class="kudos-name">Emma Sennett</div>
+            <div class="kudos-role">Customer Success Manager</div>
+            <div class="kudos-account">Parker Hannifin</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card">
+        <div class="kudos-quote">"A huuuuuge thanks for all the work you've put in. You have really made a huge difference in getting us to where we are today. This is not unnoticed at Milestone!"</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar">CS</div>
+          <div>
+            <div class="kudos-name">Casper Schwaner</div>
+            <div class="kudos-role">Customer — Go-Live Day</div>
+            <div class="kudos-account">Milestone Systems</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card teal">
+        <div class="kudos-quote">"They are very happy with the work you have done and are requesting that you deliver this engagement. They specifically asked for Ankit by name for the Signature Health Review."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar teal">CB</div>
+          <div>
+            <div class="kudos-name">Charlotte Brix</div>
+            <div class="kudos-role">CSM → Signature Tier</div>
+            <div class="kudos-account">Milestone Systems</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card orange">
+        <div class="kudos-quote">"You truly worked as a seamless part of our team — your support was instrumental in delivering this project on time and to the highest standard. The customer is thrilled."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar orange">AK</div>
+          <div>
+            <div class="kudos-name">Ata Khan</div>
+            <div class="kudos-role">Implementation Partner (NextView)</div>
+            <div class="kudos-account">Kingspan Engagement</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card green">
+        <div class="kudos-quote">"Ankit demonstrated exceptional proactive problem-solving skills throughout the engagement. His deep technical knowledge of Revenue Cloud and his collaborative communication style made him an invaluable contributor. He consistently went beyond what was asked and helped the team avoid blockers before they surfaced."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar green">MM</div>
+          <div>
+            <div class="kudos-name">Muthu Murugan</div>
+            <div class="kudos-role">Revenue Cloud Solutions Senior Director <span style="font-size:0.7rem;background:var(--sf-green-light);color:var(--sf-green);padding:1px 7px;border-radius:10px;font-weight:600;margin-left:4px">Product Team</span></div>
+            <div class="kudos-account">Revenue Cloud Product</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card teal">
+        <div class="kudos-quote">"What Ankit delivered on the Gartner project was no small task — validating the RCA architecture and building out the API-first migration framework gave us a real head start on the setup. Genuinely appreciate it!"</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar teal">SB</div>
+          <div>
+            <div class="kudos-name">Shubhayu Bera</div>
+            <div class="kudos-role">Product Manager, Revenue Cloud</div>
+            <div class="kudos-account">Gartner / RCA Architecture</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kudos-card navy">
+        <div class="kudos-quote">"Thank you for your fantastic support to date on the LearnUpon project, it has been very valuable."</div>
+        <div class="kudos-from">
+          <div class="kudos-avatar navy">MM</div>
+          <div>
+            <div class="kudos-name">Mark McCormack</div>
+            <div class="kudos-role">Account Executive</div>
+            <div class="kudos-account">LearnUpon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Core Competencies</h2>
+    </div>
+    <div class="skills-grid" id="skills-grid">
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-blue)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-blue-light)">☁️</div>
+          <h4>Revenue Cloud Advanced (RCA)</h4>
+          <div class="skill-desc">Deep platform expertise across the full RCA delivery stack — PCM, Salesforce Pricing, Billing, Transaction Management, Order Management, Revenue Lifecycle Management, Advanced Decision Tables, and CML.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">PCM</span>
+            <span class="skill-tag">Salesforce Pricing</span>
+            <span class="skill-tag">Billing</span>
+            <span class="skill-tag">Order Mgmt</span>
+            <span class="skill-tag">CML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-green)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-green-light)">🏗️</div>
+          <h4>Technical Architecture</h4>
+          <div class="skill-desc">API-first design, integration patterns, and permission set modeling for complex enterprise RCA implementations.</div>
+          <div class="skill-tags">
+            <span class="skill-tag green">API-First</span>
+            <span class="skill-tag green">Integration</span>
+            <span class="skill-tag green">Permissions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-teal)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-teal-light)">🚀</div>
+          <h4>Customer Go-Live Delivery</h4>
+          <div class="skill-desc">3 successful go-lives in FY27 with zero critical post-launch blockers across all accounts.</div>
+          <div class="skill-tags">
+            <span class="skill-tag teal">3 Go-Lives</span>
+            <span class="skill-tag teal">Milestone</span>
+            <span class="skill-tag teal">Kingspan</span>
+            <span class="skill-tag teal">Common App</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-orange)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-orange-light)">🛠️</div>
+          <h4>Hypercare &amp; Case Resolution</h4>
+          <div class="skill-desc">Led hypercare and case resolution across completed accounts. 31 product bugs identified · 8 VOCs across 9-account portfolio.</div>
+          <div class="skill-tags">
+            <span class="skill-tag orange">119+ Cases</span>
+            <span class="skill-tag orange">31 Bugs</span>
+            <span class="skill-tag orange">8 VOCs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-purple)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-purple-light)">📣</div>
+          <h4>Product Feedback (VOC)</h4>
+          <div class="skill-desc">8 VOCs logged with engineering investigations surfacing confirmed bugs across Parker and LearnUpon engagements. Direct field-to-product contribution loop.</div>
+          <div class="skill-tags">
+            <span class="skill-tag purple">8 VOCs</span>
+            <span class="skill-tag purple">Parker</span>
+            <span class="skill-tag purple">LearnUpon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-teal)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-teal-light)">🤝</div>
+          <h4>Partner &amp; Cross-Team Collaboration</h4>
+          <div class="skill-desc">Coordinated across SI partners, peer SA teams, Engineering, Product, Support, and CSM to drive outcomes.</div>
+          <div class="skill-tags">
+            <span class="skill-tag teal">SI Partners</span>
+            <span class="skill-tag teal">Engineering</span>
+            <span class="skill-tag teal">Product</span>
+            <span class="skill-tag teal">Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-gold)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-gold-light)">📊</div>
+          <h4>Stakeholder Communication</h4>
+          <div class="skill-desc">WBR video walkthroughs, executive documentation, and Slack-first async updates for leadership visibility.</div>
+          <div class="skill-tags">
+            <span class="skill-tag gold">WBR Videos</span>
+            <span class="skill-tag gold">Exec Docs</span>
+            <span class="skill-tag gold">Async</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-blue)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-blue-light)">🤖</div>
+          <h4>AI-Assisted Tooling</h4>
+          <div class="skill-desc">Claude Code for daily SA workflows. Built custom MCP server for RCA community user permission automation across engagements.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Claude Code</span>
+            <span class="skill-tag">MCP Server</span>
+            <span class="skill-tag">AI Workflows</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certs">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Certifications &amp; Learning</h2>
+      <span class="section-count">Salesforce Certification and Continuous Learning</span>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-gold)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-gold-light)">🌟</div>
+          <h4>Revenue Cloud Advanced (RCA)</h4>
+          <div class="skill-desc">RCA certification achieved. Covers the full delivery stack — PCM, Salesforce Pricing, Billing, Transaction Management, Order Management, Revenue Lifecycle Management, Advanced Decision Tables, and CML.</div>
+          <div class="skill-tags" style="margin-top:10px">
+            <span class="cert-status done" style="margin-top:0">Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-green)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-green-light)">⭐⭐</div>
+          <h4>Salesforce Trailhead Ranger</h4>
+          <div class="skill-desc">Earned 2-Star and 3-Star Ranger status on Trailhead — continuous platform upskilling across core Salesforce products, Revenue Cloud modules, and emerging AI capabilities throughout FY27.</div>
+          <div class="skill-tags" style="margin-top:10px">
+            <span class="cert-status done" style="margin-top:0">Achieved</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-purple)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-purple-light)">🤖</div>
+          <h4>Agentforce Modules</h4>
+          <div class="skill-desc">Completed all available Agentforce learning modules — early AI adopter positioning ahead of FY27 agentic AI push.</div>
+          <div class="skill-tags" style="margin-top:10px">
+            <span class="cert-status done" style="margin-top:0">Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-accent" style="background:var(--sf-teal)"></div>
+        <div class="skill-card-body">
+          <div class="skill-card-icon" style="background:var(--sf-teal-light)">🏆</div>
+          <h4>Agentforce Champion</h4>
+          <div class="skill-desc">Actively working toward Agentforce Champion certification — aligns with FY27 agentic AI strategy and ongoing platform enablement.</div>
+          <div class="skill-tags" style="margin-top:10px">
+            <span class="cert-status prog" style="margin-top:0">In Progress</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT IMPACT -->
+<section class="section" id="product">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Product Impact &amp; Release Validation</h2>
+    </div>
+    <div class="impact-cards">
+      <div class="impact-card voc">
+        <div class="ic-label">VOC — Direct Contribution</div>
+        <h4>ETL User Access Gap — Parker Hannifin</h4>
+        <p>Identified a structural platform gap blocking the Integration User from accessing Revenue Cloud fields. Authored VOC Ref# 245243 with full reproduction steps and customer impact — escalated directly to Product.</p>
+      </div>
+      <div class="impact-card voc" style="border-top-color:var(--sf-purple-light, #e0d5f5);">
+        <div class="ic-label">VOC — Field-Surfaced (7)</div>
+        <h4>7 Product Gaps Fed Back to Engineering</h4>
+        <p>Surfaced 7 additional platform gaps during active delivery across the portfolio. Each documented and escalated through the field-to-product channel — consistent pattern of turning field observations into structured product feedback.</p>
+      </div>
+      <div class="impact-card bug">
+        <div class="ic-label">Platform Bugs — 9 Accounts</div>
+        <h4>31 Confirmed Bugs · 5 Engineering Investigations</h4>
+        <p>Identified and managed 31 confirmed Revenue Cloud bugs across all 9 accounts. Escalated 5 formal Engineering investigations covering Decision Table errors, integration access gaps, and multi-customer known issues.</p>
+      </div>
+      <div class="impact-card bug">
+        <div class="ic-label">264 Release — Blitz Testing</div>
+        <h4>CML Validation + Customer Enablement</h4>
+        <p>Contributed CML-specific findings to Engineering during the 264 blitz testing cycle — surfacing edge-case regressions before GA. Separately led 264 release enablement with customers across active accounts, reducing post-release confusion and support volume.</p>
+      </div>
+      <div class="impact-card arch">
+        <div class="ic-label">Architecture Initiative</div>
+        <h4>Gartner API-First Migration Framework</h4>
+        <p>Answered an Engineering/Product request and delivered a reusable API-first migration framework — validated against Gartner's requirements and built for reuse across future RCA engagements. Recognised by Product Manager Shubhayu Bera via Slack.</p>
+      </div>
+      <div class="impact-card tool">
+        <div class="ic-label">Custom Tooling — AI / MCP</div>
+        <h4>RCA Community User Permission Automation</h4>
+        <p>Built a production-ready MCP server that generates Partner Community User permission set XMLs from a 39-permission registry — eliminating manual errors and accelerating partner community user setup across every RCA engagement.</p>
+      </div>
+      <div class="impact-card wbr">
+        <div class="ic-label">Leadership Visibility</div>
+        <h4>WBR Video Walkthroughs — Portfolio Updates</h4>
+        <p>Produced two WBR video walkthroughs (Sep 15 &amp; Sep 22) covering portfolio delivery status and key insights — enabling async leadership visibility without requiring sync meetings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI INNOVATION -->
+<section class="section" id="ai">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>AI Innovation &amp; Tooling</h2>
+    </div>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-icon">🤖</div>
+        <h4>RCA Community User Permission Automation</h4>
+        <p>Custom Node.js MCP server integrated with Claude Code. Generates production-ready Partner Community User permission set XMLs from a curated 39-permission registry. Standardizes partner community user setup across RCA engagements and eliminates manual configuration errors.</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">⚡</div>
+        <h4>Claude Code for SA Workflows</h4>
+        <p>Adopted Claude Code as primary AI assistant for SA delivery — used for case analysis, architecture documentation, customer-facing write-ups, and internal tooling across the full portfolio.</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">🔗</div>
+        <h4>Multi-Org Automation</h4>
+        <p>Integrated MCP tools with orgCS, Org62, and orgfarm environments for rapid permission validation, adoption data extraction, and cross-org case analysis without manual context-switching.</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">📊</div>
+        <h4>AI-Assisted Delivery Documentation</h4>
+        <p>Used AI tooling to produce engagement summaries, success story drafts, and architecture write-ups — reducing documentation overhead and improving consistency across customer deliverables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FY27 SUMMARY -->
+<section class="section" id="promo">
+  <div class="section-inner">
+    <div class="promo-section-wrap">
+      <div style="display:flex;align-items:center;gap:20px;margin-bottom:24px;flex-wrap:wrap;">
+        <div style="font-size:2.5rem;">🏆</div>
+        <div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:6px;">FY27 Impact at a Glance</h3>
+          <p style="font-size:0.88rem;opacity:0.85;line-height:1.6;">A year defined by consistent delivery across complexity, scale, and ambiguity — multiple go-lives, a full account turnaround, product contributions, and recognition at every level from customers, partners, and internal leadership.</p>
+        </div>
+      </div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="sig-icon">🚀</div>
+          <div class="sig-title">Delivery Scale</div>
+          <div class="sig-desc">3 go-lives, 119+ cases (3 completed accounts), 31 product bugs identified, 8 VOCs — 9 accounts, one fiscal year, no critical post-launch incidents</div>
+        </div>
+        <div class="signal-item">
+          <div class="sig-icon">💰</div>
+          <div class="sig-title">Revenue Impact</div>
+          <div class="sig-desc">$600K ARI secured on Kingspan; Milestone upgraded to Signature tier driven directly by delivery quality</div>
+        </div>
+        <div class="signal-item">
+          <div class="sig-icon">📣</div>
+          <div class="sig-title">Customer Love</div>
+          <div class="sig-desc">8+ kudos from AEs, CSMs, VPs, partners, and customers — including a customer requesting me by name for follow-on engagement</div>
+        </div>
+        <div class="signal-item">
+          <div class="sig-icon">🏗️</div>
+          <div class="sig-title">Product Contribution</div>
+          <div class="sig-desc">8 VOCs filed; engineering investigations across Parker and LearnUpon surfaced confirmed bugs &amp; feature gaps; 264 blitz testing participation</div>
+        </div>
+        <div class="signal-item">
+          <div class="sig-icon">🤝</div>
+          <div class="sig-title">Team Citizenship</div>
+          <div class="sig-desc">Peer collaboration (Ovarro), WBR video walkthroughs, MCP tooling shared across the SA team</div>
+        </div>
+        <div class="signal-item">
+          <div class="sig-icon">🤖</div>
+          <div class="sig-title">AI Leadership</div>
+          <div class="sig-desc">Early AI adopter — built custom MCP server, uses Claude Code for daily SA work, driving team efficiency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODALS -->
+
+<div class="modal-overlay" id="modal-milestone" onclick="closeModalOnOverlay(event,'modal-milestone')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Milestone Systems</div>
+        <div class="modal-subtitle">Enterprise · EMEA · Video Surveillance · Go-Live Jan 2026 · Red Sentinel · Hypercare</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-milestone')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="metric-row">
+        <div class="metric-box"><div class="mnum">68</div><div class="mlbl">Total Cases</div></div>
+        <div class="metric-box"><div class="mnum">68</div><div class="mlbl">Cases Closed</div></div>
+        <div class="metric-box"><div class="mnum">97%</div><div class="mlbl">RCA Adoption</div></div>
+        <div class="metric-box"><div class="mnum">525</div><div class="mlbl">PSL Activated</div></div>
+      </div>
+      <div class="adoption-bar-wrap">
+        <div class="adoption-bar-label"><span>RCA Adoption Rate</span><span>97%</span></div>
+        <div class="adoption-bar-track"><div class="adoption-bar-fill" data-width="97"></div></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Successfully delivered Milestone's Revenue Cloud Advanced go-live in January 2026. Led go-live delivery and owned hypercare end-to-end — resolved all 68 support cases spanning billing, integration, and platform configuration. Achieved 97% RCA adoption across 525 provisioned user licenses.</p>
+        <p class="story-p">Delivery quality directly resulted in a formal support tier upgrade: Milestone moved from Premier to Signature. CSM Charlotte Brix confirmed the customer specifically requested me by name for the follow-on Signature Health Review — a direct signal of trust earned during the engagement. Current Red sentiment reflects some pricing design concerns for their business — not a delivery failure.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Customer Voices</div>
+        <div class="quote-block green">
+          <div class="quote-text">"A huuuuuge thanks for all the work you've put in. You have really made a huge difference in getting us to where we are today. This is not unnoticed at Milestone!"</div>
+          <div class="quote-attr">Casper Schwaner — Customer, Go-Live Day</div>
+        </div>
+        <div class="quote-block teal">
+          <div class="quote-text">"They are very happy with the work you have done and are requesting that you deliver this engagement. They specifically asked for Ankit by name for the Signature Health Review."</div>
+          <div class="quote-attr">Charlotte Brix — CSM, Milestone (Signature Tier)</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Key Outcomes</div>
+        <ul class="story-list">
+          <li>Zero critical blockers across go-live and hypercare — all 68 cases resolved</li>
+          <li>Milestone upgraded from Premier → Signature support tier</li>
+          <li>Customer requested me by name for follow-on Signature Health Review</li>
+          <li>97% RCA adoption — exceptional score for enterprise go-live</li>
+        </ul>
+      </div>
+      <div><span class="pill green">Go-Live Jan 2026</span><span class="pill teal">Signature Upgrade</span><span class="pill blue">Hypercare Lead</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-commonapp" onclick="closeModalOnOverlay(event,'modal-commonapp')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Common Application</div>
+        <div class="modal-subtitle">Higher Education · Non-profit · Go-Live Feb 2026</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-commonapp')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="metric-row">
+        <div class="metric-box"><div class="mnum">28</div><div class="mlbl">Cases Resolved</div></div>
+        <div class="metric-box"><div class="mnum">60</div><div class="mlbl">PSL Activated</div></div>
+        <div class="metric-box"><div class="mnum">70%</div><div class="mlbl">RCA Adoption</div></div>
+      </div>
+      <div class="adoption-bar-wrap">
+        <div class="adoption-bar-label"><span>RCA Adoption Rate</span><span>70%</span></div>
+        <div class="adoption-bar-track"><div class="adoption-bar-fill blue" data-width="70"></div></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Common Application is the leading college admissions platform serving millions of US students annually. Delivered their Revenue Cloud Advanced go-live in Feb 2026 and owned hypercare throughout FY27.</p>
+        <p class="story-p">Resolved 28 support cases spanning billing, partner community user setup, and RCA configuration — in a non-profit education environment with unique licensing constraints. Drove 70% RCA adoption across 60 provisioned licenses, a strong result given the complexity of the operating model.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Key Outcomes</div>
+        <ul class="story-list">
+          <li>28 cases resolved — stable hypercare posture maintained throughout FY27</li>
+          <li>Partner Community User access configured for education-specific partner model</li>
+          <li>70% RCA adoption across 60 provisioned licenses in a non-profit education environment</li>
+        </ul>
+      </div>
+      <div><span class="pill go-live">Go-Live Feb 2026</span><span class="pill blue">Hypercare</span><span class="pill">Non-Profit</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-kingspan" onclick="closeModalOnOverlay(event,'modal-kingspan')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Kingspan</div>
+        <div class="modal-subtitle">Manufacturing · EMEA · Building Products · Go-Live Jun 2026</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-kingspan')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="metric-row">
+        <div class="metric-box"><div class="mnum">23</div><div class="mlbl">Cases Resolved</div></div>
+        <div class="metric-box"><div class="mnum">76</div><div class="mlbl">PSL Activated</div></div>
+        <div class="metric-box"><div class="mnum">$600K</div><div class="mlbl">ARI Secured</div></div>
+        <div class="metric-box"><div class="mnum">🔴→🟢</div><div class="mlbl">Sentiment</div></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Took over a Red-sentiment Kingspan engagement mid-flight — customer frustrated, implementation stalled. Rebuilt momentum through structured delivery, close SI partnership with NextView, and hands-on technical ownership. Delivered go-live in June 2026 with zero critical post-launch issues.</p>
+        <p class="story-p">The turnaround secured $600K in ARI and moved sentiment fully from Red to Green. Recognized at leadership level by Sowjanya (Manager) and Senior Director William Pessoa. SI partner Ata Khan (NextView): <em>"You truly worked as a seamless part of our team — your support was instrumental in delivering this project on time and to the highest standard."</em></p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Voices</div>
+        <div class="quote-block">
+          <div class="quote-text">"You truly worked as a seamless part of our team — your support was instrumental in delivering this project on time and to the highest standard. The customer is thrilled."</div>
+          <div class="quote-attr">Ata Khan — Implementation Partner, NextView</div>
+        </div>
+        <div class="quote-block purple">
+          <div class="quote-text">"Amazing work on the Kingspan engagement. Red → Green, zero critical post-launch issues, and $600K in ARI secured — this is SA excellence at its best."</div>
+          <div class="quote-attr">Sowjanya (Manager) &amp; William Pessoa (Senior Director, Revenue Cloud)</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Key Outcomes</div>
+        <ul class="story-list">
+          <li>Took over a stalled Red-sentiment engagement and delivered full Red → Green turnaround</li>
+          <li>Go-live June 2026 — zero critical post-launch issues</li>
+          <li>$600K ARI secured and protected through delivery ownership</li>
+          <li>Recognized by Manager (Sowjanya) and Senior Director (William Pessoa) at leadership level</li>
+          <li>SI partner NextView commended the collaboration — customer described as "thrilled"</li>
+        </ul>
+      </div>
+      <div><span class="pill green">Go-Live Jun 2026</span><span class="pill orange">Red→Green</span><span class="pill gold">$600K ARI</span><span class="pill navy">Partner Collab</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-learnupon" onclick="closeModalOnOverlay(event,'modal-learnupon')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">LearnUpon</div>
+        <div class="modal-subtitle">LMS / EdTech · Ireland · Active Implementation — Testing Phase</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-learnupon')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="metric-row">
+        <div class="metric-box"><div class="mnum">~$370K</div><div class="mlbl">ACV</div></div>
+        <div class="metric-box"><div class="mnum">Testing</div><div class="mlbl">Current Phase</div></div>
+        <div class="metric-box"><div class="mnum">Dec 14 '26</div><div class="mlbl">Planned Go-Live</div></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Technical SA lead on LearnUpon's Revenue Cloud Advanced implementation — an Irish LMS platform with a planned December 14, 2026 go-live and ~$370K ACV. Led end-to-end across RCA configuration, partner community user setup, and integration architecture tailored to their LMS platform needs.</p>
+        <p class="story-p">Currently in active Testing phase with go-live on track. Proactively managing risks ahead of cutover to ensure a clean launch.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">AE Recognition</div>
+        <div class="quote-block">
+          <div class="quote-text">"Thank you for your fantastic support to date on the LearnUpon project, it has been very valuable."</div>
+          <div class="quote-attr">Mark McCormack — Account Executive, LearnUpon</div>
+        </div>
+      </div>
+      <div><span class="pill uat">Testing Phase</span><span class="pill orange">Go-Live Dec 14 '26</span><span class="pill blue">~$370K ACV</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-parker" onclick="closeModalOnOverlay(event,'modal-parker')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Parker Hannifin</div>
+        <div class="modal-subtitle">Industrial Manufacturing · Enterprise · Go-Live Stage · Yellow Sentiment</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-parker')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="metric-row">
+        <div class="metric-box"><div class="mnum">32</div><div class="mlbl">PSL Activated</div></div>
+        <div class="metric-box"><div class="mnum">35%</div><div class="mlbl">RCA Adoption</div></div>
+        <div class="metric-box"><div class="mnum">6</div><div class="mlbl">VOC Filed</div></div>
+      </div>
+      <div class="adoption-bar-wrap">
+        <div class="adoption-bar-label"><span>RCA Adoption Rate</span><span>35%</span></div>
+        <div class="adoption-bar-track"><div class="adoption-bar-fill teal" data-width="35"></div></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Leading the RCA implementation for Parker Hannifin — one of the largest industrial manufacturers globally — across a 5-year deal (Aug 2025–Jul 2030) with 2,500 provisioned user licenses. Currently in Go-Live stage with 35% adoption actively being driven up. Sentiment Yellow — engaged and managing to Green.</p>
+        <p class="story-p">Proactively surfaced an ETL user access gap in the platform during active delivery and escalated directly to Product via a formally authored VOC (Ref# 245243, April 2026) — preventing a potential production blocker before it reached the customer.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">CSM Recognition</div>
+        <div class="quote-block green">
+          <div class="quote-text">"Ankit went above and beyond to understand the business requirements for the Parker Hannifin engagement. He proactively identified gaps in our PCU permissions setup before they became blockers in production — that level of foresight is rare. The customer team specifically mentioned his clarity and ownership on every call. He is a strong example of what great SA delivery looks like."</div>
+          <div class="quote-attr">Emma Sennett — Customer Success Manager, Parker Hannifin</div>
+        </div>
+      </div>
+      <div><span class="pill orange">Go-Live Stage</span><span class="pill blue">VOC Filed</span><span class="pill">Enterprise</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-ovarro" onclick="closeModalOnOverlay(event,'modal-ovarro')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Ovarro</div>
+        <div class="modal-subtitle">Utility Tech · Partner Community User Expertise</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-ovarro')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Brought in to resolve a complex Partner Community User configuration blocker on the Ovarro account — a technically nuanced RCA challenge. Diagnosed the root cause, delivered a clean resolution, and got the customer's implementation back on track.</p>
+        <p class="story-p">This engagement is a direct reflection of the Partner Community User depth built across my RCA engagements — applying that expertise to deliver a precise, fast resolution under pressure.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Key Outcomes</div>
+        <ul class="story-list">
+          <li>Complex Partner Community User blocker diagnosed and resolved — customer unblocked</li>
+          <li>Engagement delivered successfully without disruption to the implementation timeline</li>
+          <li>Deep Partner Community User knowledge applied to deliver a solution the team couldn't resolve independently</li>
+        </ul>
+      </div>
+      <div><span class="pill purple">Peer Collaboration</span><span class="pill blue">Partner Community User Expert</span><span class="pill">Knowledge Sharing</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-gartner" onclick="closeModalOnOverlay(event,'modal-gartner')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Gartner</div>
+        <div class="modal-subtitle">Research/Advisory · Engineering/Product Architecture Initiative</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-gartner')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">When Engineering and Product raised a request for RCAT expertise on the Gartner project, I stepped up and led it. Validated RCA architecture against Gartner's production requirements and delivered a reusable API-first migration quick-start framework — an asset built for Gartner but designed for reuse across future RCA engagements.</p>
+        <p class="story-p">Product Manager Shubhayu Bera recognised the outcome via Slack — direct acknowledgement of field-to-product contribution and RCAT impact on the broader Revenue Cloud ecosystem.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Product Recognition</div>
+        <div class="quote-block teal">
+          <div class="quote-text">"What I delivered on the Gartner project was no small task — validating the RCA architecture and building out the API-first migration framework gave us a real head start on the setup. Genuinely appreciate it!"</div>
+          <div class="quote-attr">Shubhayu Bera — Product Manager, Revenue Cloud</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Key Outcomes</div>
+        <ul class="story-list">
+          <li>Stepped up on an Engineering/Product request — proactive cross-functional contribution</li>
+          <li>RCA architecture validated against Gartner's production requirements</li>
+          <li>Delivered a reusable API-first migration framework — accelerates future RCA engagements</li>
+          <li>Recognised directly by Product Manager Shubhayu Bera via Slack</li>
+        </ul>
+      </div>
+      <div><span class="pill teal">Engineering Initiative</span><span class="pill blue">Architecture</span><span class="pill purple">API-First</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- A10 Networks Modal -->
+<div class="modal-overlay" id="modal-a10" onclick="closeModalOnOverlay(event,'modal-a10')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">A10 Networks</div>
+        <div class="modal-subtitle">Cybersecurity / Networking Technology · Cancelled · Red Sentiment</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-a10')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Engaged with A10 Networks — a leading cybersecurity and application delivery networking company — through POC and active stages toward a planned June 1, 2026 go-live. Engagement was ultimately cancelled before go-live due to internal factors on the customer side. RCA was not provisioned. Engagement concluded with Red sentiment.</p>
+      </div>
+      <div><span class="pill" style="background:var(--sf-red-light);color:var(--sf-red)">Cancelled</span><span class="pill">Cybersecurity</span><span class="pill orange">Red Sentiment</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- KX Systems Modal -->
+<div class="modal-overlay" id="modal-kx" onclick="closeModalOnOverlay(event,'modal-kx')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">KX Systems</div>
+        <div class="modal-subtitle">Data Analytics / Financial Tech · Cancelled · Yellow Sentiment</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-kx')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Engaged with KX Systems — a financial services data analytics and time-series database platform — across a Jan 2026–Jan 2029 deal with a planned May 4, 2026 go-live. RCA was provisioned and live. Engagement was concluded at the customer's request — they had no technical issues with RCA requiring SA intervention. A positive outcome: the platform worked, no blockers to resolve.</p>
+      </div>
+      <div><span class="pill orange">Cancelled</span><span class="pill">Data Analytics</span><span class="pill" style="background:var(--sf-gold-light);color:var(--sf-gold)">Yellow Sentiment</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Databricks Modal -->
+<div class="modal-overlay" id="modal-databricks" onclick="closeModalOnOverlay(event,'modal-databricks')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Databricks</div>
+        <div class="modal-subtitle">Data & AI Platform · Technology · Monitoring Phase</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-databricks')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Supporting Databricks — a globally recognised data and AI platform — in a passive monitoring phase. RCA is provisioned and live. Current focus is tracking adoption and partnering with the customer team to drive it upward. High strategic value account with ongoing SA presence.</p>
+      </div>
+      <div><span class="pill navy">Monitoring</span><span class="pill">Data & AI</span><span class="pill orange">Adoption Focus</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Elsevier Modal -->
+<div class="modal-overlay" id="modal-elsevier" onclick="closeModalOnOverlay(event,'modal-elsevier')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Elsevier</div>
+        <div class="modal-subtitle">Academic Publishing · Global Enterprise · Discovery Phase · Green Sentiment</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-elsevier')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Engagement Story</div>
+        <p class="story-p">Leading the discovery engagement for Elsevier — one of the world's largest academic publishing and information analytics companies. RCA is provisioned and live. Deal active Jan 2026–Jan 2027. Engagement is in Discovery phase with Green sentiment — focused on understanding their requirements and scoping the path to go-live. No go-live date set yet; laying the foundation for a strong implementation.</p>
+      </div>
+      <div><span class="pill blue">Discovery</span><span class="pill green">Green Sentiment</span><span class="pill">Academic Publishing</span><span class="pill purple">Enterprise</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    const overlay = document.getElementById(id);
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      overlay.querySelectorAll('.adoption-bar-fill').forEach(bar => {
+        bar.style.width = (bar.dataset.width || 0) + '%';
+      });
+    }, 50);
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOnOverlay(e, id) {
+    if (e.target.classList.contains('modal-overlay')) closeModal(id);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
+  // Animate skill bars on scroll into view
+  const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = (bar.dataset.width || 0) + '%';
+        });
+        skillObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const skillsGrid = document.getElementById('skills-grid');
+  if (skillsGrid) skillObserver.observe(skillsGrid);
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(s => navObserver.observe(s));
+
+  // Count-up animation on hero stats
+  function countUp(el, target, suffix, duration) {
+    const isFloat = target % 1 !== 0;
+    const start = 0;
+    const step = duration / 60;
+    let current = start;
+    const increment = target / (duration / (1000 / 60));
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) { current = target; clearInterval(timer); }
+      const display = isFloat ? current.toFixed(1) : Math.floor(current);
+      el.textContent = (target >= 100 ? display : display) + suffix;
+    }, 1000 / 60);
+  }
+  document.querySelectorAll('.stat-card').forEach(card => {
+    const numEl = card.querySelector('.stat-num');
+    const raw = numEl.textContent.trim();
+    const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    const suffix = raw.replace(/[0-9.]/g, '');
+    if (!isNaN(num)) {
+      numEl.textContent = '0' + (suffix.includes('K') ? '' : suffix.replace('+',''));
+      setTimeout(() => countUp(numEl, num, suffix.replace(/[0-9]/g,''), 900), 200);
+    }
+  });
+
+  // Pulse on last timeline dot (most recent activity)
+  const dots = document.querySelectorAll('.tl-dot');
+  if (dots.length) dots[dots.length - 1].classList.add('pulse');
+
+  // Fade-in sections on scroll
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.account-card, .impact-card, .ai-card, .signal-item, .tl-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(12px)';
+    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    fadeObserver.observe(el);
+  });
+</script>
+</body>
+</html>
